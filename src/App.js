@@ -1,22 +1,9 @@
-import './App.css';
-import React, { useState } from "react";
-import Button from './UI/Button/Button';
-import DemoOutput from './components/Demo/DemoOutput';
+import React from 'react';
 
-function App() {    
-    const [showParagraph, setshowParagraph] = useState(false);
+import Ingredients from './components/Ingredients/Ingredients';
 
-    const toggleParagraphHandler = () => {
-      setshowParagraph((preShowParagraph) => !preShowParagraph);
-    };
-
-
-    return ( 
-      <div className = "App" >
-        <DemoOutput show={showParagraph} />
-        <Button onClick={toggleParagraphHandler}>Toggle Paragraph</Button>
-      </div>
-    );
-}
+const App = props => {
+  return <Ingredients />;
+};
 
 export default App;
